@@ -1,0 +1,9 @@
+- id: 1
+  event_name: "Concert A"
+  event_date: "2024-07-01 20:00:00"
+  total_seats: 100
+
+- id: 2
+  event_name: "Concert B"
+  event_date: "2024-08-15 19:30:00"
+  total_seats: 150

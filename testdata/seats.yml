@@ -1,0 +1,127 @@
+- id: 1
+  section: "A"
+  seat_number: 1
+  seat_type: "Regular"
+  seat_status: true
+  price: 100.00
+  event_id: 1
+
+- id: 2
+  section: "A"
+  seat_number: 2
+  seat_type: "Regular"
+  seat_status: true
+  price: 100.00
+  event_id: 1
+
+- id: 3
+  section: "A"
+  seat_number: 3
+  seat_type: "Regular"
+  seat_status: false
+  price: 100.00
+  event_id: 1
+
+- id: 4
+  section: "A"
+  seat_number: 4
+  seat_type: "Regular"
+  seat_status: true
+  price: 100.00
+  event_id: 1
+
+- id: 5
+  section: "B"
+  seat_number: 1
+  seat_type: "VIP"
+  seat_status: true
+  price: 200.00
+  event_id: 1
+
+- id: 6
+  section: "B"
+  seat_number: 2
+  seat_type: "VIP"
+  seat_status: true
+  price: 200.00
+  event_id: 1
+
+- id: 7
+  section: "B"
+  seat_number: 3
+  seat_type: "VIP"
+  seat_status: false
+  price: 200.00
+  event_id: 1
+
+- id: 8
+  section: "B"
+  seat_number: 4
+  seat_type: "VIP"
+  seat_status: true
+  price: 200.00
+  event_id: 1
+
+- id: 9
+  section: "C"
+  seat_number: 1
+  seat_type: "Regular"
+  seat_status: true
+  price: 100.00
+  event_id: 2
+
+- id: 10
+  section: "C"
+  seat_number: 2
+  seat_type: "Regular"
+  seat_status: false
+  price: 100.00
+  event_id: 2
+
+- id: 11
+  section: "C"
+  seat_number: 3
+  seat_type: "Regular"
+  seat_status: true
+  price: 100.00
+  event_id: 2
+
+- id: 12
+  section: "C"
+  seat_number: 4
+  seat_type: "Regular"
+  seat_status: true
+  price: 100.00
+  event_id: 2
+
+- id: 13
+  section: "D"
+  seat_number: 1
+  seat_type: "VIP"
+  seat_status: true
+  price: 200.00
+  event_id: 2
+
+- id: 14
+  section: "D"
+  seat_number: 2
+  seat_type: "VIP"
+  seat_status: false
+  price: 200.00
+  event_id: 2
+
+- id: 15
+  section: "D"
+  seat_number: 3
+  seat_type: "VIP"
+  seat_status: true
+  price: 200.00
+  event_id: 2
+
+- id: 16
+  section: "D"
+  seat_number: 4
+  seat_type: "VIP"
+  seat_status: true
+  price: 200.00
+  event_id: 2

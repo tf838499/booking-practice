@@ -1,0 +1,6 @@
+-- ALTER TABLE IF EXISTS "orders" DROP CONSTRAINT IF EXISTS "orders_order_by_fkey";
+
+DROP TABLE IF EXISTS tickets;
+DROP TABLE IF EXISTS seats;
+DROP TABLE IF EXISTS events;
+DROP TABLE IF EXISTS consumers;

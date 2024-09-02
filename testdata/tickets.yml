@@ -1,0 +1,23 @@
+- consumer_id: 1
+  event_id: 1
+  seat_id: 1
+  order_trade_no: 'ORDER_TRADE_NO_1'
+  ticket_status: 1
+
+- consumer_id: 1
+  event_id: 1
+  seat_id: 2
+  order_trade_no: 'ORDER_TRADE_NO_1'
+  ticket_status: 1
+
+- consumer_id: 2
+  event_id: 2
+  seat_id: 3
+  order_trade_no: 'ORDER_TRADE_NO_2'
+  ticket_status: 2
+
+- consumer_id: 2
+  event_id: 2
+  seat_id: 4
+  order_trade_no: 'ORDER_TRADE_NO_2'
+  ticket_status: 2
