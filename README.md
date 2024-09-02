@@ -9,7 +9,7 @@
 ### 後端
 * Golang：核心程式語言，用於開發後端服務。  
 * Postgres：關聯式資料庫，用於儲存票務和訂單資訊。  
-* Redis：用於快取及處理高頻資料存取，特別是在管理座位預訂和可用性時。  
+* Redis：用於快取及處理高頻資料存取，特別是在管理座位預訂和可用性。  
 ### 資料庫操作
 * sqlc：用於從 SQL 查詢生成型別安全的 Go 代碼，確保與 Postgres 的高效互動。  
 * Migrations：資料庫 schema 管理和版本控制工具（例如 golang-migrate），確保 schema 的平滑演進。  
@@ -21,46 +21,6 @@
 * 高並發處理：系統設計用於處理大量並發請求，模擬真實情境下用戶搶購演唱會門票的場景。  
 * 座位預訂邏輯：實現確保座位預訂在高負載下仍能一致且可靠的邏輯處理。  
 * 訂票提交：在預訂後，系統處理訂單資訊，確保資料完整性並處理潛在的競爭條件。  
-## 專案結構 
-/cmd：包含應用程式的入口點。  
-/internal：核心應用程式邏輯，包括服務、模型和工具。  
-/migrations：包含資料庫 schema 的遷移。  
-/repo : 包含 sqlc 生成的代碼，包括查詢和模型。  
-/testdata：包括模擬和基於 Docker 的測試資料。  
-### 設置與安裝
-1. 克隆專案
-```bash=
-git clone https://github.com/yourusername/concert-ticketing-system.git
-cd concert-ticketing-system
-```
-
-2. 安裝依賴  
-確保已安裝 Go、Docker 和 Postgres，然後安裝必要的 Go 套件：
-```
-go mod tidy  
-```
-
-3. 執行遷移  
-應用資料庫遷移以設置 schema：
-```
-migrate -path ./migrations -database "postgres://user:password@localhost:5432/yourdb?sslmode=disable" up
-```
-4. 使用 sqlc 生成代碼  
-生成與資料庫查詢對應的 Go 代碼：
-```
-sqlc generate
-```
-5. 運行應用程式  
-啟動應用程式：
-```
-go run ./cmd/app/main.go
-```
-
-## 未來改進
-擴展性：探索橫向擴展和負載平衡的選項。  
-測試增強：擴大測試覆蓋範圍，引入更複雜的測試場景。  
-用戶認證：新增用戶認證和授權層。  
-
 
 ## 背景動機
 在促銷活動、演唱會購票等特定時段，網站常常會瞬間湧入大量請求。為了學習這種情況，我選擇模擬演唱會搶票場景，
@@ -77,14 +37,13 @@ go run ./cmd/app/main.go
 
 ## 假設情境
 1. 演唱會場次已知
-2. 共10個廠區，1000個座位且座位號連續
+2. 共10個廠區，1000個座位且座位號連續，總共10k個座位出售
 3. 創建訂單後10秒內付款
 
 ## 期待目標
 1. 一分鐘內銷售完所有座位
 2. 座位不會超賣
-3. 同時接受10k的請求
-
+3. 同時接受並處理10k的請求
 
 
 ## 流程設計
@@ -129,7 +88,45 @@ go run ./cmd/app/main.go
 
 
 
+## 專案結構 
+/cmd：包含應用程式的入口點。  
+/internal：核心應用程式邏輯，包括服務、模型和工具。  
+/migrations：包含資料庫 schema 的遷移。  
+/repo : 包含 sqlc 生成的代碼，包括查詢和模型。  
+/testdata：包括模擬和基於 Docker 的測試資料。  
+### 設置與安裝
+1. 克隆專案
+```bash=
+git clone https://github.com/yourusername/concert-ticketing-system.git
+cd concert-ticketing-system
+```
 
+2. 安裝依賴  
+確保已安裝 Go、Docker 和 Postgres，然後安裝必要的 Go 套件：
+```
+go mod tidy  
+```
+
+3. 執行遷移  
+應用資料庫遷移以設置 schema：
+```
+migrate -path ./migrations -database "postgres://user:password@localhost:5432/yourdb?sslmode=disable" up
+```
+4. 使用 sqlc 生成代碼  
+生成與資料庫查詢對應的 Go 代碼：
+```
+sqlc generate
+```
+5. 運行應用程式  
+啟動應用程式：
+```
+go run ./cmd/app/main.go
+```
+
+## 未來改進
+擴展性：探索橫向擴展和負載平衡的選項。  
+測試增強：擴大測試覆蓋範圍，引入更複雜的測試場景。  
+用戶認證：新增用戶認證和授權層。  
 
 
 
